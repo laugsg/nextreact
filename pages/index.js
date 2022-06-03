@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from 'react'
 import * as styles from "./index.css"
 
 function Header({ title }) {
@@ -8,7 +8,7 @@ function Header({ title }) {
 export default function HomePage() {
   const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
 
-  const [likes, setLikes] = useState(0);
+  const [likes, setLikes] = React.useState(0);
 
   function handleClick() {
     setLikes(likes + 1);
