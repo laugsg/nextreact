@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 /**
  * Theme implementation is algebraic,
@@ -6,18 +6,14 @@ import React from 'react'
  * then it's imported into the component to be used as parent wrapper,
  * finally the theme definition is implemented as class names for child elements
  */
-import {
-  darkTheme,
-  lightTheme
-} from './libs/globalVars.css'
+import { darkTheme, lightTheme } from "./libs/globalVars.css";
 // - Global theme plus local stlyes
-import * as styles from "./component.css"
-// - Theme as wrapper plus styles
+// import * as styles from "./component.css";
 import {
-  themeClass,
-  exampleStyle
-} from './theme-without-contract.css'
-
+  global
+} from './libs/global-theme.css'
+// - Theme as wrapper plus styles
+import { themeClass, exampleStyle } from "./theme-without-contract.css";
 
 function Header({ title }) {
   return <h1>{title ? title : "Default title"}</h1>;
@@ -34,24 +30,24 @@ export default function HomePage() {
 
   return (
     <>
-    {/* - Global theme plus local stlyes */}
-    <div className={styles.themeVars}>
-    <div className={lightTheme}>
-      {/* - Theme as wrapper plus styles */}
-    <div className={themeClass}>
-    <div className={exampleStyle}>
-      <Header title="Develop. Preview. Ship. 🚀" />
-      <ul>
-        {names.map((name) => (
-          <li key={name}>{name}</li>
-        ))}
-      </ul>
+      {/* - Global theme plus local stlyes */}
+      {/* <div className={styles.themeVars}> */}
+        <div className={lightTheme}>
+          {/* - Theme as wrapper plus styles */}
+          <div className={themeClass}>
+            <div className={exampleStyle}>
+              <Header title="Develop. Preview. Ship. 🚀" />
+              <ul>
+                {names.map((name) => (
+                  <li key={name}>{name}</li>
+                ))}
+              </ul>
 
-      <button onClick={handleClick}>Like ({likes})</button>
-    </div>
-    </div>
-    </div>
-    </div>
+              <button onClick={handleClick}>Like ({likes})</button>
+            </div>
+          </div>
+        </div>
+      {/* </div> */}
     </>
   );
 }
