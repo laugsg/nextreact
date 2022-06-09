@@ -3,7 +3,7 @@ import {
 } from '@vanilla-extract/css'
 import {
     contractColors
-} from './contracts/contract-colors.css'
+} from '../contracts/contract-colors.css'
 
 export const themePrimaryDefinition = style({
     background: contractColors.colors.primary

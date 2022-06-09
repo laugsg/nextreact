@@ -1,6 +1,6 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
-import { contractColors } from "./contracts/contract-colors.css";
+import { contractColors } from "../contracts/contract-colors.css";
 
 const colorProperties = defineProperties({
   conditions: {

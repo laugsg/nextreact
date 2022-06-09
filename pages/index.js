@@ -3,7 +3,7 @@ import React from "react";
 // Elements
 import Button from "./components/Button";
 import ButtonVariant from "./components/ButtonVariant";
-
+import Card from "./components/Card";
 /**
  * Theme implementation
  * A style file works to define how contract connect with css properties,
@@ -27,9 +27,10 @@ import ButtonVariant from "./components/ButtonVariant";
  */
 
 // Styles
+import { container } from './index.css'
 import { themePrimary } from "./themes/theme-primary.css";
-import { sprinkles } from "./styles-contract-sprinkles.css";
-import { themePrimaryDefinition } from "./styles-contract.css";
+import { sprinkles } from "./styles/styles-contract-sprinkles.css";
+import { themePrimaryDefinition } from "./styles/styles-contract.css";
 
 // components
 export default function HomePage() {
@@ -42,7 +43,8 @@ export default function HomePage() {
   }
 
   return (
-    <div class="container">
+    <div className={container}>
+      <Card />
       {/* - */}
       {/* <div className={themePrimaryWrapper}> */}
       {/* 1. reuse contracts into Sprinkles */}
