@@ -24,13 +24,14 @@ This project was create from scratch, first as HTML with React elements, finally
 - Vanilla-Extract
 
 1. Packages
-   * `npm i vanilla-extract/css @vanilla-extract/babel-plugin @vanilla-extract/next-plugin typescript @types/react @types/node`
+   * `npm i vanilla-extract/css @vanilla-extract/babel-plugin @vanilla-extract/next-plugin typescript @types/react @types/node @vanilla-extract/sprinkles @vanilla-extract/recipes`
    1. @vanilla-extract/css 
    2. @vanilla-extract/babel-plugin 
    3. @vanilla-extract/next-plugin
    4. typescript 
    5. @types/react 
    6. @types/node
+   7. @vanilla-extract/sprinkles
 2. Config files 1. next.config.js
    ```
    const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin");
@@ -38,20 +39,3 @@ This project was create from scratch, first as HTML with React elements, finally
    const nextConfig = require("next").NextConfig;
    module.exports = withVanillaExtract(nextConfig);
    ```
-
-
-# vanilla-extract minimal use case
-
-```
-// # index.css.ts
-import { style } from "@vanilla-extract/css";
-export const root = style({
-    background: 'aquamarine',
-    color: 'darkslateblue',
-    padding: '16px',
-})
-
-// # index.js
-import * as styles from "./index.css"
-<div className={styles.root}>
-```
