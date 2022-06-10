@@ -12,7 +12,7 @@ export const cardClass = style({
   "@media": {
     "screen and (min-width: 1024px)": {
       display: contractCard.display.display,
-      aligItems: contractCard.display.aligItems,
+      alignItems: contractCard.display.alignItems,
     },
   },
 });
