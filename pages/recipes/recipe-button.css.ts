@@ -18,8 +18,8 @@ export const button = recipe({
     borderColor: contractDefaultButton.borders.borderColor as contractDefaultButton.borders.borderColor,
     borderStyle: "solid" as "solid",
     borderWidth: contractDefaultButton.borders.borderWidth as contractDefaultButton.borders.borderWidth,
-    color: contractDefaultButton.color.default,
-    margin: contractDefaultButton.margin.small,
+    color: contractDefaultButton.color.default as contractDefaultButton.color.default,
+    margin: contractDefaultButton.margin.small as contractDefaultButton.margin.small,
   },
   variants: {
     color: {
