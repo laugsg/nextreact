@@ -1,25 +1,25 @@
 import React from "react";
 
 // Elements
-import Card from "./components/Card";
+import Card from "../vanilla-styles/components/Card";
 import {
   ButtonOne,
   ButtonTwo,
   ButtonThree
-} from "./components/Button";
+} from "../vanilla-styles/components/Button";
 import { 
   ButtonOneVariant,
   ButtonTwoVariant,
   ButtonThreeVariant
-} from "./components/ButtonStyleVariant";
+} from "../vanilla-styles/components/ButtonStyleVariant";
 
 
 // Styles
-import { container } from "./index.css";
-import { styleList } from './styles/styles-list.css'
-import { sprinkles } from "./styles/styles-sprinkles-reuse-contract.css";
-import { themeColors } from "./themes/theme-colors.css";
-import { styleListElement } from "./styles/styles-list.css";
+import { container } from "../vanilla-styles/index.css";
+import { styleList } from '../vanilla-styles/styles/styles-list.css'
+import { sprinkles } from "../vanilla-styles/styles/styles-sprinkles-reuse-contract.css";
+import { themeColors } from "../vanilla-styles/themes/theme-colors.css";
+import { styleListElement } from "../vanilla-styles/styles/styles-list.css";
 
 // components
 export default function HomePage() {
