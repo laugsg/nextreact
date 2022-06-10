@@ -7,7 +7,7 @@ export const container = style({
     "@media": {
       "screen and (max-width: 1024px)": {
         display: "flex",
-        aligItems: "center",
+        alignItems: "center",
         flexWrap: "wrap"
       },
     },
