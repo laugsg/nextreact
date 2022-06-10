@@ -23,7 +23,6 @@
         "node",
         "react",
         "jest",
-        "@testing-library/jest-dom"
     ],
   },
   "include": [
