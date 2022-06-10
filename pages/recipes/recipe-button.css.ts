@@ -58,4 +58,4 @@ export const button = recipe({
   },
 });
 
-export type button = RecipeVariants<typeof button>;
+// export type button = RecipeVariants<typeof button>;
