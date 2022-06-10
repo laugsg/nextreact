@@ -42,4 +42,4 @@ const colorProperties = defineProperties({
 export const sprinkles = createSprinkles(colorProperties);
 
 // It's a good idea to export the Sprinkles type too
-export type Sprinkles = Parameters<typeof colorProperties>[0];
+// export type Sprinkles = Parameters<typeof colorProperties>[0];
