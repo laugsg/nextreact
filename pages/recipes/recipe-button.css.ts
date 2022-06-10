@@ -8,18 +8,18 @@ import { buttonDefaultSprinkles } from "../styles/styles-sprinkles.css";
  * Reuse of contracts, themes and sprinkles to be implemented
  * with recipe API to create variants and combination of theme
  * to create new variants on fly.
- *
+ * 
  * implemented: ButtonVariant.js
  */
-export const button = recipe({
+export const button: MapLeafNodes<any, CSSVarFunction> = recipe({
   base: {
-    border: "1px" as "1px",
-    borderRadius: "10px" as "10px",
-    borderColor: "#000" as  "#000",
-    borderStyle: "solid" as "solid",
-    borderWidth: "2px" as "2px",
-    color: 'purple' as 'purple',
-    margin: '5px' as '5px',
+    border: contractDefaultButton.borders.border,
+    borderRadius: contractDefaultButton.borders.borderRadius,
+    borderColor: contractDefaultButton.borders.borderColor,
+    borderStyle: "solid",
+    borderWidth: contractDefaultButton.borders.borderWidth,
+    color: contractDefaultButton.color.default,
+    margin: contractDefaultButton.margin.small,
   },
   variants: {
     color: {
@@ -37,7 +37,7 @@ export const button = recipe({
     borders: {
       primary: { borderColor: contractColors.colors.primary },
       default: { borderColor: "#e769d9" },
-    },
+    }
   },
   compoundVariants: [
     {
@@ -48,7 +48,7 @@ export const button = recipe({
       style: {
         borderStyle: "dashed",
         borderWidth: "17px",
-        borderColor: "purple",
+        borderColor: 'purple',
       },
     },
   ],
@@ -57,3 +57,4 @@ export const button = recipe({
     size: "medium",
   },
 });
+
