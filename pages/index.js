@@ -1,95 +1,113 @@
 import React from "react";
 
 // Elements
-import Button from "./components/Button";
-import ButtonVariant from "./components/ButtonVariant";
 import Card from "./components/Card";
-/**
- * Theme implementation
- * A style file works to define how contract connect with css properties,
- * then it's imported into the component to be used as parent wrapper,
- * finally the theme definition is implemented as class names for child elements
- *
- * Process :
- * 1. define how the Contract is it
- * 2. define how the Theme implements the contract
- * 3. define how the Style is based in
- * which css property is defined by each contract value.
- * 4. import the Theme into the component
- * 5. import Style Definition
- * 6. Place the Theme as parent wrapper
- * 7. Place the Style Definition as child wrapper
- *
- * Files involved:
- * 1. contract.css.ts (contract & theme)
- * 2. style.css.ts (style definition - imports the contract)
- * 3. Component.tsx/jsx/js (imports theme & themeDefinition)
- */
+import { ButtonOne } from "./components/Button";
+import { ButtonTwo } from "./components/Button";
+import { ButtonThree } from "./components/Button";
+import { ButtonOneVariant } from "./components/ButtonVariant";
+import { ButtonTwoVariant } from "./components/ButtonVariant";
+import { ButtonThreeVariant } from "./components/ButtonVariant";
+
 
 // Styles
-import { container } from './index.css'
-import { themePrimary } from "./themes/theme-primary.css";
-import { sprinkles } from "./styles/styles-contract-sprinkles.css";
-import { themePrimaryDefinition } from "./styles/styles-contract.css";
+import { themeColors } from "./themes/theme-colors.css";
+import { container } from "./index.css";
+import { sprinkles } from "./styles/styles-sprinkles-reuse-contract.css";
+import { styleList } from './styles/styles-list.css'
+import { styleListElement } from "./styles/styles-list.css";
 
 // components
 export default function HomePage() {
-  const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
-
-  const [likes, setLikes] = React.useState(0);
-
-  function handleClick() {
-    setLikes(likes + 1);
-  }
 
   return (
-    <div className={container}>
-      <Card />
-      {/* - */}
-      {/* <div className={themePrimaryWrapper}> */}
-      {/* 1. reuse contracts into Sprinkles */}
-      <div className={themePrimary}>
-        <div className={themePrimaryDefinition}>
-          {/* <div className={themeSprinkles}> */}
-          <Header />
-          <ul>
-            {/*  */}
-            {names.map((name) => (
-              <li
-                className={sprinkles({
-                  color: "default",
-                })}
-                key={name}
-              >
-                {name}
-              </li>
-            ))}
-          </ul>
+    <>
+      <Header />
 
-          <ButtonVariant onClick={handleClick} likes={likes} />
+      <List />
 
-          {/* <hr /> */}
+      <div className={container}>
+        <Card>
+          <ButtonOne />
+          <ButtonOneVariant />
+        </Card>
+        
+        <Card>
+          <ButtonTwo />
+          <ButtonTwoVariant />
+        </Card>
 
-          {/* <Button onClick={handleClick} likes={likes} /> */}
-        </div>
+        <Card>
+          <ButtonThree />
+          <ButtonThreeVariant />
+        </Card>
       </div>
-      {/* </div> */}
-      {/* </div> */}
-    </div>
+    </>
   );
 }
 
 function Header() {
   return (
     <>
-      {/* 2. load values into Sprinkles */}
       <h1
         className={sprinkles({
-          color: "secondary",
+          color: "primary",
         })}
       >
-        Fancy Title
+        @vanilla-extract: Proof of Concept
       </h1>
     </>
+  );
+}
+
+function List() {
+  const names = [
+    {
+      api: "Styling API",
+      url: "https://vanilla-extract.style/documentation/styling-api/",
+    },
+    {
+      api: "Sprinkles API",
+      url: "https://vanilla-extract.style/documentation/sprinkles-api/",
+    },
+    {
+      api: "Recipes API",
+      url: "https://vanilla-extract.style/documentation/recipes-api/",
+    },
+  ];
+  const spkls = sprinkles({
+    color: "secondary",
+  });
+  return (
+    <ol className={`${styleList} ${themeColors}`}>
+      {names.map((item) => (
+        <li
+          className={`${styleListElement} ${spkls}`}
+          key={item.api}
+        >
+          {/* 
+            If the theme is not provided
+            the value comes from the most near definde value.
+            e.g: if themeColors variable is comented into the className
+            the value of default comes from styles-sprinkles-reuse-contract.css.ts
+            because it's defined there but if themeColors is provided as a variable
+            the value of default comes from the theme.
+            Same for primary/secondary but in those cases any value is provided
+            for color so it displays on black.
+
+            Any place which links a contract to provide styling for an element
+            Any element which is provided of styling by a methed that links a contract
+            it should carries the theme which provides values for that contract.
+            e.g: `color:{secondary: contractColors.colors.secondary}`
+            this element should carries className={themeColors}
+          */}
+          <span>
+          </span>
+          <a href={item.url} target="_blank" style={{marginLeft:'2px',textDecoration:'none'}}>
+            {item.api}
+          </a>
+        </li>
+      ))}
+    </ol>
   );
 }

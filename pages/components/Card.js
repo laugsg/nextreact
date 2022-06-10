@@ -2,14 +2,17 @@ import React from "react";
 
 // styles
 import { themeCard } from "../themes/theme-card.css";
-import { cardClass } from "../styles/styles-card.css";
-import { cardAvatar } from "../styles/styles-card-avatar.css";
+import { 
+  cardClass, 
+  cardHeader, 
+  cardAvatar 
+} from "../styles/styles-card.css";
 
-export default function Card() {
+export default function Card({children}) {
   return (
     <div className={themeCard}>
       <div className={cardClass}>
-        <div className="card-header">
+        <div className={cardHeader}>
           <img className={cardAvatar} src="https://bit.ly/2qGUB4W" />
         </div>
         <div className="card-body">
@@ -17,7 +20,7 @@ export default function Card() {
           <p className="card-body-desc">Some description</p>
           <div className="card-body-footer">
             <span className="card-body-footer-badge">Discount</span>
-            <button className="card-body-footer-button">Add to Cart</button>
+            {children}
           </div>
         </div>
       </div>

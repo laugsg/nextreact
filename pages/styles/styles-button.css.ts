@@ -3,24 +3,29 @@ import { style } from "@vanilla-extract/css";
 import { contractSizing } from "../contracts/contract-sizing.css";
 import { contractButton } from "../contracts/contract-button.css";
 
+/** Styling-Variations: client-side
+ * API tools: style && styleVariants 
+ * contract source: contract-sizing.css.ts && contract-button.css.ts
+ */
+
 // style shared by buttons
 const baseStyle = style({
-  margin: "0px",
+  margin: "5px",
   padding: "0px",
 });
 // Theme
 const baseTheme = style({
-  margin: contractSizing.size.small,
+  padding: contractSizing.size.small,
 });
 // Theme specific for buttons margin & padding
 const overwriteTheme = style({
-  margin: contractButton.space.margin,
+  padding: contractButton.space.padding,
 });
 /** variants of button
  * Each key is an array containing a variant.
- * The primary key apply the base style,
- * the secondary key is the Theme variant that overwrites the base style,
- * the tertiary key is the button specific theme variant that overwrites the Theme.
+ * primary: base style,
+ * secondary: overwrites the base style,
+ * tertiary: overwrites Theme.
  */
 export const buttonStyle = styleVariants({
   primary: [baseStyle],

@@ -1,13 +1,19 @@
-import { contractDefaultButton } from "./contract-default-button.css";
+import { contractDefaultButton } from "../contracts/contract-default-button.css";
 import { createTheme } from '@vanilla-extract/css'
 
+/** client-side
+ * Contracts & themes are configured
+ * with client-side API 
+ * 
+ * implemented: ButtonVariant.js
+ */
 export const themeDefaultButton = createTheme(contractDefaultButton,{
     border: {
         border: '1px',
         borderRadius: '10px',
         borderColor: '#000',
         borderStyle: 'solid',
-        borderWidth: '1px',
+        borderWidth: '2px',
     },
     background: {
         primary: 'red',
@@ -28,6 +34,7 @@ export const themeDefaultButton = createTheme(contractDefaultButton,{
         small: '5px',
         medium: '10px',
         large: '20px',
+        none: '0px',
     },
     padding: {
         small: '5px',

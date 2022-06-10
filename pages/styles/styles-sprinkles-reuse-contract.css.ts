@@ -2,6 +2,19 @@ import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
 import { contractColors } from "../contracts/contract-colors.css";
 
+/** server-side
+ * This sprinkles reuse a previously defined contract
+ * to provide types for styling,
+ * includes values crated on the fly, 
+ * includes conditional rendering based in @media query.
+ * 
+ * 
+ * implemented: index.js
+ * components:
+ *  - Header
+ *  - List
+ */
+
 const colorProperties = defineProperties({
   conditions: {
     lightMode: {},
@@ -11,17 +24,17 @@ const colorProperties = defineProperties({
   properties: {
     color: {
       // 1. reuse contracts into Sprinkles
-      primary: contractColors.colors.primary, // <-- lightMode
-      default: contractColors.colors.default, // <-- default
+      primary: contractColors.colors.primary, // <-- contract
+      secondary: contractColors.colors.secondary, // <-- contract
       // 2. load values into Sprinkles
-      secondary: "#69d2e7", // <-- darkMode
+      default: "#69d2e7", // <-- created on the fly
     },
     background: {
       // 1. reuse contracts into Sprinkles
-      primary: contractColors.colors.primary, // <-- lightMode
-      secondary: contractColors.colors.secondary, // <-- darkMode
+      primary: contractColors.colors.primary, // <-- contract
+      secondary: contractColors.colors.secondary, // <-- contract
       // 2. load values into Sprinkles
-      default: "#e0e4cc", // <-- default
+      default: "#e0e4cc", // <-- created on the fly
     },
   },
 });

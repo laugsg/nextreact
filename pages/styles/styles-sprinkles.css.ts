@@ -1,7 +1,10 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
+import { contractDefaultButton } from "../contracts/contract-default-button.css";
 
-import { contractDefaultButton } from "./contract-default-button.css";
-
+/** Styling: server-side
+ * API tools: defineProperties && createSprinkles 
+ * contract: contract-default-button.css
+ */
 const buttonDefaultProperties = defineProperties({
   conditions: {
     default: false,

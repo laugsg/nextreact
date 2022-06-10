@@ -1,5 +1,9 @@
 import { createThemeContract } from '@vanilla-extract/css'
 
+/** client-side
+ * Contracts & themes are configured
+ * with client-side API 
+ */
 export const contractDefaultButton = createThemeContract({
     border: {
         border: null,
@@ -27,6 +31,7 @@ export const contractDefaultButton = createThemeContract({
         small: null,
         medium: null,
         large: null,
+        none: null,
     },
     padding: {
         small: null,
