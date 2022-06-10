@@ -5,7 +5,7 @@ import { createThemeContract } from '@vanilla-extract/css'
  * with client-side API 
  */
 export const contractDefaultButton = createThemeContract({
-    border: {
+    borders: {
         border: null,
         borderRadius: null,
         borderColor: null,

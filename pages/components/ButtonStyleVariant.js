@@ -57,7 +57,7 @@ export function ButtonTwoVariant() {
       <button className={button({
         color: "primary",
         space: "small",
-        border: "primary"
+        // border: "primary"
       })}>
         Add to Cart
       </button>

@@ -1,5 +1,4 @@
 import { style } from '@vanilla-extract/css'
-import { contractColors } from '../contracts/contract-colors.css'
 
 /** client-side
  * Styles for list and list elements

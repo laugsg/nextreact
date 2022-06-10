@@ -23,10 +23,10 @@ const buttonDefaultProperties = defineProperties({
       default: "#a26445",
     },
     border: {
-      border: contractDefaultButton.border.border,
-      borderRadius: contractDefaultButton.border.borderRadius,
-      borderColor: contractDefaultButton.border.borderColor,
-      borderStyle: contractDefaultButton.border.borderStyle,
+      border: contractDefaultButton.borders.border,
+      borderRadius: contractDefaultButton.borders.borderRadius,
+      borderColor: contractDefaultButton.borders.borderColor,
+      borderStyle: contractDefaultButton.borders.borderStyle,
       borderWidth: "5px",
     },
     size: {

@@ -8,7 +8,7 @@ import { createTheme } from '@vanilla-extract/css'
  * implemented: ButtonVariant.js
  */
 export const themeDefaultButton = createTheme(contractDefaultButton,{
-    border: {
+    borders: {
         border: '1px',
         borderRadius: '10px',
         borderColor: '#000',

@@ -13,12 +13,12 @@ import { buttonDefaultSprinkles } from "../styles/styles-sprinkles.css";
  */
 export const button = recipe({
   base: {
-    border: contractDefaultButton.border.border,
-    borderRadius: contractDefaultButton.border.borderRadius,
-    borderColor: contractDefaultButton.border.borderColor,
+    border: contractDefaultButton.borders.border,
+    borderRadius: contractDefaultButton.borders.borderRadius,
+    borderColor: contractDefaultButton.borders.borderColor,
     color: contractDefaultButton.color.default,
     margin: contractDefaultButton.margin.small,
-    borderWidth: contractDefaultButton.border.borderWidth,
+    borderWidth: contractDefaultButton.borders.borderWidth,
     borderStyle: "solid"
   },
   variants: {
@@ -34,7 +34,7 @@ export const button = recipe({
     space: {
       small: buttonDefaultSprinkles({ padding: "medium" }),
     },
-    border: {
+    borders: {
       primary: { borderColor: contractColors.colors.primary },
       default: { borderColor: "#e769d9" },
     }
