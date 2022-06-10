@@ -8,16 +8,16 @@ import { buttonDefaultSprinkles } from "../styles/styles-sprinkles.css";
  * Reuse of contracts, themes and sprinkles to be implemented
  * with recipe API to create variants and combination of theme
  * to create new variants on fly.
- *
+ * 
  * implemented: ButtonVariant.js
  */
 export const button = recipe({
   base: {
-    border: "1px",
-    borderRadius: "10px",
-    borderColor: "#000",
-    borderStyle: "solid",
-    borderWidth: "2px",
+    border: contractDefaultButton.borders.border as contractDefaultButton.borders.border,
+    borderRadius: contractDefaultButton.borders.borderRadius as contractDefaultButton.borders.borderRadius,
+    borderColor: contractDefaultButton.borders.borderColor as contractDefaultButton.borders.borderColor,
+    borderStyle: "solid" as "solid",
+    borderWidth: contractDefaultButton.borders.borderWidth as contractDefaultButton.borders.borderWidth,
     color: contractDefaultButton.color.default,
     margin: contractDefaultButton.margin.small,
   },
@@ -37,7 +37,7 @@ export const button = recipe({
     borders: {
       primary: { borderColor: contractColors.colors.primary },
       default: { borderColor: "#e769d9" },
-    },
+    }
   },
   compoundVariants: [
     {
@@ -48,7 +48,7 @@ export const button = recipe({
       style: {
         borderStyle: "dashed",
         borderWidth: "17px",
-        borderColor: "purple",
+        borderColor: 'purple',
       },
     },
   ],
@@ -57,3 +57,4 @@ export const button = recipe({
     size: "medium",
   },
 });
+
