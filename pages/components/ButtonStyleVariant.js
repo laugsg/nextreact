@@ -18,9 +18,7 @@ export function ButtonOneVariant() {
     {/* location: Left */}
     <div className={themeDefaultButton}>
       <button className={buttonDefaultSprinkles({
-        color: {
-          theme: "primary"
-        },
+        color: "primary",
         margin: "small",
         padding: "small"
       })}>
