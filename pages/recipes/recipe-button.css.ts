@@ -60,3 +60,5 @@ export const button = recipe({
     size: "medium",
   },
 });
+
+export type ButtonVariants = RecipeVariants<typeof button>;
