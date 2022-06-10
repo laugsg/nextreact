@@ -1,22 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "module": "commonjs",
+    "target": "es2020",
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+      "es2020",
+      "dom"
+  ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "strict": true,
+    "noEmit": false,
+    "experimentalDecorators": true,
     "incremental": true,
     "esModuleInterop": true,
-    "module": "esnext",
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": false,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": [
+        "node",
+        "react",
+        "jest",
+        "@testing-library/jest-dom"
+    ],
   },
   "include": [
     "next-env.d.ts",
