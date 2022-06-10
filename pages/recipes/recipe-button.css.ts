@@ -12,7 +12,7 @@ import { buttonDefaultSprinkles } from "../styles/styles-sprinkles.css";
  * implemented: ButtonVariant.js
  */
 export const button = recipe({
-  base: <MapLeafNodes<any, CSSVarFunction>> {
+  base: {
     border: contractDefaultButton.border.border,
     borderRadius: contractDefaultButton.border.borderRadius,
     borderColor: contractDefaultButton.border.borderColor,
@@ -58,4 +58,4 @@ export const button = recipe({
   },
 });
 
-export type ButtonVariants = RecipeVariants<typeof button>;
+export type button = RecipeVariants<typeof button>;
