@@ -2,19 +2,23 @@ import React from "react";
 
 // Elements
 import Card from "./components/Card";
-import { ButtonOne } from "./components/Button";
-import { ButtonTwo } from "./components/Button";
-import { ButtonThree } from "./components/Button";
-import { ButtonOneVariant } from "./components/ButtonVariant";
-import { ButtonTwoVariant } from "./components/ButtonVariant";
-import { ButtonThreeVariant } from "./components/ButtonVariant";
+import {
+  ButtonOne,
+  ButtonTwo,
+  ButtonThree
+} from "./components/Button";
+import { 
+  ButtonOneVariant,
+  ButtonTwoVariant,
+  ButtonThreeVariant
+} from "./components/ButtonStyleVariant";
 
 
 // Styles
-import { themeColors } from "./themes/theme-colors.css";
 import { container } from "./index.css";
-import { sprinkles } from "./styles/styles-sprinkles-reuse-contract.css";
 import { styleList } from './styles/styles-list.css'
+import { sprinkles } from "./styles/styles-sprinkles-reuse-contract.css";
+import { themeColors } from "./themes/theme-colors.css";
 import { styleListElement } from "./styles/styles-list.css";
 
 // components
