@@ -48,7 +48,7 @@ export const button = recipe({
       style: {
         borderStyle: "dashed",
         borderWidth: "17px",
-        borderColor: 'purple',
+        borderColor: contractColors.colors.primary,
       },
     },
   ],

@@ -12,3 +12,18 @@ export const container = style({
       },
     },
   })
+
+
+  export const containerGrid = style({
+    // display: "flex",
+    justifyContent: "center",
+    // alignItems: "center",
+    fontFamily: 'sans-serif',
+    "@media": {
+      "screen and (max-width: 1024px)": {
+        // display: "flex",
+        // alignItems: "center",
+        flexWrap: "wrap"
+      },
+    },
+  })

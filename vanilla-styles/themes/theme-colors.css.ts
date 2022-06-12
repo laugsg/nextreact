@@ -7,7 +7,7 @@ import { contractColors } from '../contracts/contract-colors.css'
  */
 export const themeColors = createTheme(contractColors, {
     colors: {
-        primary: '#79e769',
+        primary: '#69d2e7',
         secondary: 'purple',
         default: '#e0e4cc'
     }

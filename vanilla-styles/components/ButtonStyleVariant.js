@@ -20,7 +20,7 @@ export function ButtonOneVariant() {
       <button className={buttonDefaultSprinkles({
         color: "primary",
         margin: "small",
-        padding: "small"
+        padding: "small",
       })}>
         Add to Cart
       </button>
@@ -46,7 +46,7 @@ export function ButtonOneVariant() {
 export function ButtonTwoVariant() {
   return (
     <>
-    {/* location: Right */}
+    {/* location: Center */}
     <div className={`${buttonDefaultSprinkles} ${themeSizing} ${themeColors} ${themeDefaultButton}`}>
     {/* using recipe API:
         - taking values from themeSizing && themeColors
@@ -55,7 +55,6 @@ export function ButtonTwoVariant() {
       <button className={button({
         color: "primary",
         space: "small",
-        // border: "primary"
       })}>
         Add to Cart
       </button>
@@ -67,8 +66,8 @@ export function ButtonTwoVariant() {
 export function ButtonThreeVariant() {
   return (
     <>
-    {/* location: Center */}
-    <div className={`${themeSizing} ${themeColors} ${themeDefaultButton}`}>
+    {/* location: Right */}
+    <div className={`${buttonDefaultSprinkles} ${themeSizing} ${themeColors} ${themeDefaultButton}`}>
     {/* using recipe API: 
         - taking values from themeSizing && themeColors
         - combine options to get a newly variant

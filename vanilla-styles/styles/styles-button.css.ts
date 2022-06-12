@@ -12,10 +12,15 @@ import { contractButton } from "../contracts/contract-button.css";
 const baseStyle = style({
   margin: "5px",
   padding: "0px",
+  border: 'none',
+  background: 'none'
 });
 // Theme
 const baseTheme = style({
   padding: contractSizing.size.small,
+  border: '1px solid #bcbcc5',
+  background: '#e9e9ed',
+  borderRadius:'5px'
 });
 // Theme specific for buttons margin & padding
 const overwriteTheme = style({
@@ -30,5 +35,5 @@ const overwriteTheme = style({
 export const buttonStyle = styleVariants({
   primary: [baseStyle],
   secondary: [baseStyle, baseTheme],
-  tertiary: [baseTheme, overwriteTheme],
+  tertiary: [baseStyle, baseTheme, overwriteTheme],
 });

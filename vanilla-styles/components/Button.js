@@ -4,6 +4,7 @@ import React from "react";
 import { buttonStyle } from "../styles/styles-button.css";
 import { themeSizing } from "../themes/theme-sizing.css";
 import { themeButton } from "../themes/theme-button.css";
+import { badgeStyle } from "./markup/styles-badge.css";
 
 /** ButtonN: client-side
  * theme: theme-sizing.css && theme-button.css.ts
@@ -15,8 +16,9 @@ export function ButtonOne() {
     <>
     {/* location: Left */}
     <div className={`${themeSizing} ${themeButton}`}>
+    <span className={badgeStyle.primary}>Discount</span>
       <button className={buttonStyle.primary}>
-        Add to Cart
+      🛒 See More
       </button>
     </div>
     </>
@@ -28,8 +30,9 @@ export function ButtonTwo() {
     <>
     {/* location: Center */}
     <div className={`${themeSizing} ${themeButton}`}>
+    <span className={badgeStyle.secondary}>Discount</span>
       <button className={buttonStyle.secondary}>
-        Add to Cart
+      🛒 See More
       </button>
     </div>
     </>
@@ -42,8 +45,9 @@ export function ButtonThree() {
     <>
     {/* location: Right */}
     <div className={`${themeSizing} ${themeButton}`}>
+    <span className={badgeStyle.tertiary}>Discount</span>
       <button className={buttonStyle.tertiary}>
-        Add to Cart
+      🛒 See More
       </button>
     </div>
     </>

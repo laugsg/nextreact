@@ -6,11 +6,6 @@ import { contractDefaultButton } from "../contracts/contract-default-button.css"
  * contract: contract-default-button.css
  */
 const buttonDefaultProperties = defineProperties({
-  // conditions: {
-  //   default: 'baseTheme',
-  //   theme: true,
-  // },
-  // defaultCondition: "default",
   properties: {
     background: {
       primary: contractDefaultButton.color.primary,
